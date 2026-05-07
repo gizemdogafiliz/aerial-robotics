@@ -74,7 +74,7 @@ custom controllers, plotting, and SDF model edits required by each assignment.
 
 ### High-level architecture
 
-![Software architecture](assets/architecture.png)
+![Software architecture](assets/software_architecture.png)
 
 User Python clients drive [`genomixd`](https://git.openrobots.org/projects/genomix) over HTTP/JSON.
 `genomixd` exposes the full set of `telekyb3` GenoM3 components (state estimation, controllers, observers,
@@ -91,7 +91,7 @@ tk3lab-ws/
 ├── README.md                                ← this file
 ├── LICENSE
 ├── assets/                                  ← README media (diagrams + demo video)
-│   ├── architecture.png
+│   ├── software_architecture.png
 │   ├── 6a_dataflow.png
 │   └── 6a_physical_interaction_recording.webm
 ├── gazebo/
