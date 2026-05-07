@@ -88,9 +88,7 @@ of the real flight controller / ESC / IMU stack on the physical platform.
 
 ```
 tk3lab-ws/
-├── 6a_physical_interaction_recording.webm   ← demo video (top of this README)
-├── README.md                                ← personal notes (kept locally)
-├── README_GITHUB.md                         ← this file
+├── README.md                                ← this file
 ├── gazebo/
 │   ├── models/
 │   │   ├── mrsim-hexa-ua/                   ← under-actuated hexa SDF
