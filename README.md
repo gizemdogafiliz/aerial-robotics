@@ -24,10 +24,7 @@ Final assignment: a fully-actuated tilted hexarotor (TiltHex) equipped with a 0.
 end-effector slides along a 1 m square pattern on a static thin wall, with contact forces shaped by an
 **admittance filter** and a **wrench observer** (`phynt-genom3`).
 
-<video src="6a_physical_interaction_recording.webm" controls width="100%">
-  Your browser does not support the video tag.
-  <a href="6a_physical_interaction_recording.webm">Download the recording</a>.
-</video>
+https://github.com/user-attachments/assets/128ed5de-2f88-4ef9-a5f8-4a10dfc13c03
 
 ---
 
