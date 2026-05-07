@@ -248,9 +248,20 @@ python3 plot_03a.py {quad|hexa-ua|hexa-fa}
 
 #### Plots
 
-| Quadrotor | Hexa-UA | Hexa-FA |
-|---|---|---|
-| ![3a quad](src/03a-trajectory/plots_03a/plot_03a_quad.png) | ![3a hexa-ua](src/03a-trajectory/plots_03a/plot_03a_hexa-ua.png) | ![3a hexa-fa](src/03a-trajectory/plots_03a/plot_03a_hexa-fa.png) |
+Fully-actuated hexarotor:
+
+![3a hexa-fa](src/03a-trajectory/plots_03a/plot_03a_hexa-fa.png)
+
+<details>
+<summary>Show other robots (Quadrotor, Hexa-UA)</summary>
+
+**Quadrotor**
+![3a quad](src/03a-trajectory/plots_03a/plot_03a_quad.png)
+
+**Hexa-UA**
+![3a hexa-ua](src/03a-trajectory/plots_03a/plot_03a_hexa-ua.png)
+
+</details>
 
 ### 3b - Polynomial trajectories with full derivative chain
 
@@ -279,9 +290,20 @@ python3 plot_03b.py {quad|hexa-ua|hexa-fa}
 
 #### Plots
 
-| Quadrotor | Hexa-UA | Hexa-FA |
-|---|---|---|
-| ![3b quad](src/03b-trajectory/plots_03b/plot_03b_quad.png) | ![3b hexa-ua](src/03b-trajectory/plots_03b/plot_03b_hexa-ua.png) | ![3b hexa-fa](src/03b-trajectory/plots_03b/plot_03b_hexa-fa.png) |
+Fully-actuated hexarotor:
+
+![3b hexa-fa](src/03b-trajectory/plots_03b/plot_03b_hexa-fa.png)
+
+<details>
+<summary>Show other robots (Quadrotor, Hexa-UA)</summary>
+
+**Quadrotor**
+![3b quad](src/03b-trajectory/plots_03b/plot_03b_quad.png)
+
+**Hexa-UA**
+![3b hexa-ua](src/03b-trajectory/plots_03b/plot_03b_hexa-ua.png)
+
+</details>
 
 ### 4 - State estimation with `pom-genom3`
 
@@ -367,16 +389,7 @@ implements:
 
 The full chain is:
 
-```
-maneuver/desired ──> phynt/reference ──> phynt/desired ──> uavpos/reference ──> uavatt/uav_input
-                          │                                                          │
-                          └─ wrench_measure <── uavatt/wrench_measure                 ▼
-                                                                                  rotorcraft
-                                                                                      │
-                                                                                      ▼
-                                                                                  Gazebo
-                                                                                  (mrsim)
-```
+![6a data flow](6a_dataflow.png)
 
 #### World, model and parameters
 
