@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<!-- Under-actuated hexarotor: based on mrsim-tilthex with tilt removed (pitch=0) -->
+<sdf version="1.5">
+  <model name="mrsim-hexa-ua">
+    <link name="base">
+      <inertial>
+        <mass>2.3</mass>
+        <inertia>
+          <ixx>0.0115</ixx><ixy>0</ixy><ixz>0</ixz>
+          <iyy>0.0114</iyy><iyz>0</iyz>
+          <izz>0.0194</izz>
+        </inertia>
+      </inertial>
+      <collision name="base">
+        <pose>0 0 -0.05 0 0 0</pose>
+        <geometry><cylinder><radius>0.1354</radius><length>0.15</length></cylinder></geometry>
+      </collision>
+      <collision name="land_1">
+        <pose>0.2 0 -0.21 0 0 0</pose>
+        <geometry><sphere><radius>0.03</radius></sphere></geometry>
+      </collision>
+      <collision name="land_2">
+        <pose>-0.1 0.173 -0.21 0 0 0</pose>
+        <geometry><sphere><radius>0.03</radius></sphere></geometry>
+      </collision>
+      <collision name="land_3">
+        <pose>-0.1 -0.173 -0.21 0 0 0</pose>
+        <geometry><sphere><radius>0.03</radius></sphere></geometry>
+      </collision>
+      <visual name="body">
+        <geometry><cylinder><radius>0.1354</radius><length>0.05</length></cylinder></geometry>
+        <material><ambient>0.8 0.4 0.1 1</ambient><diffuse>0.8 0.4 0.1 1</diffuse></material>
+      </visual>
+      <visual name="lander-1">
+        <pose>0.1025 0.1776 -0.11 3.1416 -0.1736 1.0472</pose>
+        <geometry>
+          <cylinder><radius>0.01</radius><length>0.25</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1.0</ambient>
+          <diffuse>0 0 0 1.0</diffuse>
+        </material>
+      </visual>
+      <visual name="lander-2">
+        <pose>-0.1025 0.1776 -0.11 3.1416 -0.1736 2.0944</pose>
+        <geometry>
+          <cylinder><radius>0.01</radius><length>0.25</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1.0</ambient>
+          <diffuse>0 0 0 1.0</diffuse>
+        </material>
+      </visual>
+      <visual name="lander-3">
+       <pose>-0.1025 -0.1776 -0.11 3.1416 0.1736 1.0472</pose>
+        <geometry>
+          <cylinder><radius>0.01</radius><length>0.25</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1.0</ambient>
+          <diffuse>0 0 0 1.0</diffuse>
+        </material>
+      </visual>
+      <visual name="lander-4">
+        <pose>0.1025 -0.1776 -0.11 3.1416 0.1736 2.0944</pose>
+        <geometry>
+          <cylinder><radius>0.01</radius><length>0.25</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1.0</ambient>
+          <diffuse>0 0 0 1.0</diffuse>
+        </material>
+      </visual>
+
+      <visual name="arm-1">
+        <pose>0.2150 0 0 0 1.5708 0</pose>
+        <geometry><cylinder><radius>0.01</radius><length>0.38998</length></cylinder></geometry>
+        <material><ambient>1.0 0.2 0.2 1.0</ambient><diffuse>1.0 0.2 0.2 1.0</diffuse></material>
+      </visual>
+      <visual name="arm-2">
+        <pose>0.1025 0.1776 0 0 1.5708 1.0472</pose>
+        <geometry><cylinder><radius>0.01</radius><length>0.40998</length></cylinder></geometry>
+        <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+      </visual>
+      <visual name="arm-3">
+        <pose>-0.1025 0.1776 0 0 1.5708 2.0944</pose>
+        <geometry><cylinder><radius>0.01</radius><length>0.40998</length></cylinder></geometry>
+        <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+      </visual>
+      <visual name="arm-4">
+        <pose>-0.2150 0 0 0 1.5708 0</pose>
+        <geometry><cylinder><radius>0.01</radius><length>0.38998</length></cylinder></geometry>
+        <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+      </visual>
+      <visual name="arm-5">
+        <pose>-0.1025 -0.1776 0 0 1.5708 -2.0944</pose>
+        <geometry><cylinder><radius>0.01</radius><length>0.40998</length></cylinder></geometry>
+        <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+      </visual>
+      <visual name="arm-6">
+        <pose>0.1025 -0.1776 0 0 1.5708 -1.0472</pose>
+        <geometry><cylinder><radius>0.01</radius><length>0.40998</length></cylinder></geometry>
+        <material><ambient>0.6 0.6 0.6 1</ambient><diffuse>0.6 0.6 0.6 1</diffuse></material>
+      </visual>
+    </link>
+
+    <include>
+      <uri>model://mrsim-rotor</uri>
+      <name>rotor-1</name>
+      <pose>0.38998 0 0 0 0 0</pose>
+    </include>
+    <joint name="motor-1" type="revolute">
+      <parent>base</parent>
+      <child>rotor-1::propeller</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <include>
+      <uri>model://mrsim-rotor</uri>
+      <name>rotor-2</name>
+      <pose>0.195 0.3377 0 0 0 0</pose>
+    </include>
+    <joint name="motor-2" type="revolute">
+      <parent>base</parent>
+      <child>rotor-2::propeller</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <include>
+      <uri>model://mrsim-rotor</uri>
+      <name>rotor-3</name>
+      <pose>-0.195 0.3377 0 0 0 0</pose>
+    </include>
+    <joint name="motor-3" type="revolute">
+      <parent>base</parent>
+      <child>rotor-3::propeller</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <include>
+      <uri>model://mrsim-rotor</uri>
+      <name>rotor-4</name>
+      <pose>-0.38998 0 0 0 0 0</pose>
+    </include>
+    <joint name="motor-4" type="revolute">
+      <parent>base</parent>
+      <child>rotor-4::propeller</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <include>
+      <uri>model://mrsim-rotor</uri>
+      <name>rotor-5</name>
+      <pose>-0.195 -0.3377 0 0 0 0</pose>
+    </include>
+    <joint name="motor-5" type="revolute">
+      <parent>base</parent>
+      <child>rotor-5::propeller</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <include>
+      <uri>model://mrsim-rotor</uri>
+      <name>rotor-6</name>
+      <pose>0.195 -0.3377 0 0 0 0</pose>
+    </include>
+    <joint name="motor-6" type="revolute">
+      <parent>base</parent>
+      <child>rotor-6::propeller</child>
+      <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <plugin name="mrsim" filename="mrsim-gazebo.so">
+      <link>base</link>
+      <rotors>
+        <noise>0.03</noise>
+        <cf>9.9016e-4</cf>
+        <ct>1.9e-5</ct>
+        <vfxy>0.5</vfxy><vfz>0.5</vfz>
+        <vtxy>0.5</vtxy><vtz>0.5</vtz>
+        <rotor><joint spin="cw">motor-1</joint></rotor>
+        <rotor><joint spin="ccw">motor-2</joint></rotor>
+        <rotor><joint spin="cw">motor-3</joint></rotor>
+        <rotor><joint spin="ccw">motor-4</joint></rotor>
+        <rotor><joint spin="cw">motor-5</joint></rotor>
+        <rotor><joint spin="ccw">motor-6</joint></rotor>
+      </rotors>
+    </plugin>
+  </model>
+</sdf>
