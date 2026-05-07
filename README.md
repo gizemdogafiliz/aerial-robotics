@@ -1,4 +1,4 @@
-# Aerial Robotics Laboratory - Hands-on Assignments
+# Aerial Robotics Laboratory
 
 > **Course:** Advanced Topics in Automation and Control Engineering - *Aerial Robotics Laboratory*
 > **Institution:** Politecnico di Milano, 2025–26
