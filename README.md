@@ -74,7 +74,7 @@ custom controllers, plotting, and SDF model edits required by each assignment.
 
 ### High-level architecture
 
-![Software architecture](architecture.png)
+![Software architecture](assets/architecture.png)
 
 User Python clients drive [`genomixd`](https://git.openrobots.org/projects/genomix) over HTTP/JSON.
 `genomixd` exposes the full set of `telekyb3` GenoM3 components (state estimation, controllers, observers,
@@ -387,7 +387,7 @@ implements:
 
 The full chain is:
 
-![6a data flow](6a_dataflow.png)
+![6a data flow](assets/6a_dataflow.png)
 
 #### World, model and parameters
 
