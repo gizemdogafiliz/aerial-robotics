@@ -483,10 +483,7 @@ The momentum-based torque observer is from:
 > A. De Luca, A. Albu-Schäffer, S. Haddadin, and G. Hirzinger, *"Collision Detection and Safe
 > Reaction with the DLR-III Lightweight Manipulator Arm"*, IROS 2006.
 
-I claim authorship only over the Python clients in `src/`, the parameter tuning, the SDF additions
-needed for assignment 6a (EE bar + thin wall world), and the plotting scripts.
-
-f---
+---
 
 ## References
 
