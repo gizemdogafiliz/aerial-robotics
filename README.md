@@ -1,4 +1,4 @@
-# Aerial Robotics Laboratory
+# Aerial Robotics Laboratory - Hands-on Assignments
 
 > **Course:** Advanced Topics in Automation and Control Engineering - *Aerial Robotics Laboratory*
 > **Institution:** Politecnico di Milano, 2025–26
@@ -89,6 +89,11 @@ of the real flight controller / ESC / IMU stack on the physical platform.
 ```
 tk3lab-ws/
 ├── README.md                                ← this file
+├── LICENSE
+├── assets/                                  ← README media (diagrams + demo video)
+│   ├── architecture.png
+│   ├── 6a_dataflow.png
+│   └── 6a_physical_interaction_recording.webm
 ├── gazebo/
 │   ├── models/
 │   │   ├── mrsim-hexa-ua/                   ← under-actuated hexa SDF
@@ -430,8 +435,17 @@ python3 plot_06a.py
 | 62 | (1.0,  0, 1.0, 0) | 4 | retract - same Z, no extra climb |
 | 69 | (0,    0, 0,   0) | 5 | land |
 
-`BODY_X_CONTACT = X_WALL − L_BAR + 0.15 = 1.55` m. Gives the drone 0.15 m of nominal "deflection" past
-the wall surface - the AF turns this into a steady-state spring force ≈ 1.5 N.
+**Lab requirement:** the EE must apply a normal contact force `|Fx| ≥ 2 N` against the wall while
+sliding through the inspection square (highlighted as the green band on the contact plot).
+
+`BODY_X_CONTACT = X_WALL − L_BAR + 0.15 = 1.55` m. With the sphere tip (`L_EFF = L_BAR + r_tip = 0.65` m),
+the nominal EE position lands `0.20` m past the wall surface. At equilibrium the AF spring
+(`K_v_x = 10` N/m) balances the Gazebo wall spring (`K_wall = 500` N/m):
+
+```
+penetration_ss = ΔEE_nom / (1 + K_wall / K_v_x) = 0.20 / 51 ≈ 4 mm
+F_ss           = K_wall · penetration_ss = 500 N/m · 0.004 m = 2 N   →  meets ≥ 2 N requirement
+```
 
 #### Plots
 
@@ -472,7 +486,7 @@ The momentum-based torque observer is from:
 I claim authorship only over the Python clients in `src/`, the parameter tuning, the SDF additions
 needed for assignment 6a (EE bar + thin wall world), and the plotting scripts.
 
----
+f---
 
 ## References
 
