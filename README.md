@@ -1,7 +1,7 @@
 # Aerial Robotics Laboratory — Hands-on Assignments
 
 > **Course:** Advanced Topics in Automation and Control Engineering — *Aerial Robotics Laboratory*
-> **Institution:** Politecnico di Milano (course 055512), 2025–26
+> **Institution:** Politecnico di Milano, 2025–26
 > **Lecturers:** Dr. Marco Tognon, Dr. Gianluca Corsini — *RAINBOW Team, Inria / IRISA / Université de Rennes*
 
 This repository contains my implementations for the 6 lab assignments that make up the Aerial Robotics
