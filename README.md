@@ -91,9 +91,6 @@ tk3lab-ws/
 ├── README.md                                ← this file
 ├── LICENSE
 ├── assets/                                  ← README media (diagrams + demo video)
-│   ├── software_architecture.png
-│   ├── 6a_dataflow.png
-│   └── 6a_physical_interaction_recording.webm
 ├── gazebo/
 │   ├── models/
 │   │   ├── mrsim-hexa-ua/                   ← under-actuated hexa SDF
