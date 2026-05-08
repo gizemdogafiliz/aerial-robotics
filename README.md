@@ -458,8 +458,7 @@ F_ss           = K_wall · penetration_ss = 500 N/m · 0.004 m = 2 N   →  meet
 
 ## Acknowledgments
 
-This repository is the result of work I carried out as a student on the *Aerial Robotics Laboratory*
-module of the *Advanced Topics in Automation and Control Engineering* course (a.y. 2025–26). All
+This repository is the result of work I carried out as a student on the *Aerial Robotics - Advanced Topics in Automation and Control Engineering* course (a.y. 2025–26). All
 intellectual credit for the lab design, the course material, the `tk3lab` Docker image, and the
 `telekyb3` software framework belongs to:
 
@@ -479,7 +478,7 @@ The momentum-based torque observer is from:
 
 > A. De Luca, A. Albu-Schäffer, S. Haddadin, and G. Hirzinger, *"Collision Detection and Safe
 > Reaction with the DLR-III Lightweight Manipulator Arm"*, IROS 2006.
-
+> ([DOI](https://doi.org/10.1109/IROS.2006.282053))
 ---
 
 ## References
