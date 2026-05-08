@@ -1,7 +1,7 @@
 # Aerial Robotics Laboratory
 
-> **Course:** Advanced Topics in Automation and Control Engineering - *Aerial Robotics Laboratory*
-> **Institution:** Politecnico di Milano, 2025–26
+> **Course:** Advanced Topics in Automation and Control Engineering - *Aerial Robotics* <br>
+> **Institution:** Politecnico di Milano, 2025–26 <br>
 > **Lecturers:** Dr. Marco Tognon, Dr. Gianluca Corsini - *RAINBOW Team, Inria / IRISA / Université de Rennes*
 
 This repository contains my implementations for the 6 lab assignments that make up the Aerial Robotics
